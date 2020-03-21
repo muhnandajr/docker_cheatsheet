@@ -1,0 +1,22 @@
+FROM is use to specify docker image 
+FROM ubuntu
+RUN (to run particular command or image)
+RUN apt-get install -y react
+CMD (executing for specific command/running container)
+CMD “echo” “Welcome to Gone Sinau”
+ENTRYPOINT
+ENTRYPOINT echo
+CMD “Welcome to Gone Sinau”
+ENTRYPOINT echo
+ADD (command gets two argument, source and destination) usualy for copying directory/file
+ADD /my_app_folder /my_app_folder
+ENV (sometime our application need environment)
+ENV SERVER_WORKS 4
+WORKDIR (move likes CD
+WORKDIR /path WORKDIR ~/
+EXPOSE (for frontend application, enabling port networking for accessing container)
+EXPOSE 8080
+MAINTAINER (declares the author)
+MAINTAINER nanda
+USER (select which one user to run container using UID)
+USER 751

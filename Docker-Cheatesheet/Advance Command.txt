@@ -1,0 +1,9 @@
+Docker Compose Build
+Docker Compose Up
+Docker Swarm init --advertise-addr 192.168.1.100
+Docker Swarm Join
+Docker Swarm Join-Token  (generate new token in docker  manager)
+Docker Swarm Leave (--force)
+Docker Services (control existing docker service, ls, ps, scale, stop, logs, rm)
+
+

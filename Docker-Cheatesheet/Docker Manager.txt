@@ -1,0 +1,8 @@
+docker swarm init --advertise-addr (ip addr)
+docker service ls
+docker service ps (name)
+docker service create (name) (image name)
+docker service rm (name)
+docker service scale (name)=5
+docker swarm leave --force
+docker node --update --availability drain (name-node)

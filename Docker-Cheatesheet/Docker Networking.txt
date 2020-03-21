@@ -1,0 +1,29 @@
+docker swarm init --advertise-addr ip
+docker swarm join --token 
+docker network create -d myoverlaynetwork
+
+docker service create --name webapp1 -d --network myoverlaynetwork -p 8001:80 hshar/webapp
+docker service ls
+
+docker service create --name mysql -d --network myoverlaynetwork -p 3306:3306 hshar/mysql
+docker service ls
+
+docker ps - on master
+docker ps
+
+# WEB APP CONFIGURATION
+docker exec -it CONTAINER-ID bash
+nano /var/www/html/index.php
+$servername = "mysql"
+$password = "gonesinau"
+
+# MYSQL CONFIGURATION
+docker exec -it CONTAINER-ID bash
+mysql -u root -p gonesinau
+CREATE DATABASE HandsOn;
+USE HandsOn;
+CREATE TABLE course_details (course_name VARCHAR(10), course_id VARCHAR(11));
+localhost:8001/index.php
+SHOW tables;
+select * from table_name;
+

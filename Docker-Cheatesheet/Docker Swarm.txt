@@ -1,0 +1,38 @@
+FIRST SCENARIO
+#initiate docker swarm
+docker swarm init --advertise-addr ip addr
+docker swarm join-token manager
+docker node ls
+
+#creating docker image
+docker build -t "topmovie"
+
+#staring service
+docker service create --name "TopMovieApp" -p 4200:4200 movieapp
+docker service ls 
+docker service ps TopMovieApp
+docker node ps
+----
+docker warm join \ token
+docker swarm join-token node
+
+SECOND SCENARIO
+#initiate
+docker service create --name "TopMovieApp" -p 4200:4200 --mode global movieapp
+docker service ls
+docker service ps TopMovieApp
+
+THIRD SCENARIO
+#initiate
+docker service create --name "TopMovieApp" -p 4200:4200 --replicas=2 movieapp
+docker service ps TopMovieApp
+
+HIGH AVAILABILITY
+docker stop TopMovieApp -on Worker1
+
+MANUAL SCALLING UP
+docker service scale TopMovieApp=5
+
+MANAGER AS MANAGER (drain and active)
+docker node update --availability drain o71pjnita2lgovorpqgrvqhd7
+

@@ -1,0 +1,34 @@
+Docker --Version
+Docker Help
+Docker Run
+Docker Images
+Docker Pull
+Docker Build 
+Docker Container (logs, kill, rm, run, start)
+Docker Login
+Docker Push
+Docker Tag
+
+Docker PS
+Docker Stop (shutdown)
+Docker Kill
+Docker rm
+Docker rmi
+Docker exec (accessing running container)
+Docker commit (create new image from edited container in local repo)
+Docker export (.tar)
+Docker import
+
+#sampling
+docker run hello-world
+docker images (show images)
+docker pull ubuntu
+docker run -it -d ubuntu (running container)
+docker run ps -a (list container)
+docker exec -it b11537 bash (container id)
+docker stop (container id)
+docker commit (container id) muhnandajr/ubuntu
+docker login
+docker push muhnandajr/ubuntu
+docker rm (container id)
+docker rmi (image ig)
